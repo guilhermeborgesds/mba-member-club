@@ -1,0 +1,311 @@
+/* ================================
+   Variáveis de Cores e Tipografia
+   ================================ */
+:root {
+  --color-pink: #eb5280;
+  --color-green: #4caf50;
+  --color-gradient-start: #a45be8;
+  --color-gradient-end: #ff6b6b;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #9ca3af;
+  --text-md: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --border-radius: 12px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================
+     Reset & Base
+     ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--gray-100);
+  color: #333;
+  line-height: 1.4;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================================
+     HEADER
+     ================================ */
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-pink);
+  line-height: 1;
+}
+.logo-sub {
+  font-size: 1rem;
+  color: var(--color-pink);
+}
+
+/* ================================
+     INPUT DE ID
+     ================================ */
+.card-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.card-input input {
+  width: 300px;
+  padding: 0.75rem 1rem;
+  font-size: var(--text-sm);
+  border: none;
+  border-radius: 999px;
+  background: var(--gray-200);
+}
+.card-input button {
+  margin-left: -3rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ================================
+     LAYOUT PRINCIPAL
+     ================================ */
+.main-content {
+  padding: 0 1rem 2rem;
+}
+.cards-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ================================
+     CARD BASE
+     ================================ */
+.card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* ================================
+     1) USER + HISTÓRICO
+     ================================ */
+.user-history-card {
+  width: 320px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+.user-text h2 {
+  font-size: var(--text-md);
+}
+.user-text p {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+.history {
+  margin-top: 1rem;
+}
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.history-header h3 {
+  font-size: var(--text-sm);
+}
+.history-count {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+.history-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+.history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.history-date {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-xs);
+  color: #555;
+}
+.icon-check {
+  width: 20px;
+  height: 20px;
+}
+
+/* ================================
+     2) CARTÃO FIDELIDADE
+     ================================ */
+.loyalty-card {
+  width: 380px;
+  box-sizing: border-box;
+}
+.loyalty-card .card-header h3 {
+  font-size: var(--text-sm);
+  margin-bottom: 0.25rem;
+}
+.loyalty-card .card-header p {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-bottom: 0.5rem;
+}
+.card-id {
+  display: inline-block;
+  font-size: var(--text-xs);
+  background: var(--gray-200);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  color: #555;
+}
+
+.loyalty-id {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  background: #dfdcdf;
+  border-radius: 999px;
+}
+
+.stamps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.stamp {
+  width: 60px;
+  height: 60px;
+  background: var(--gray-200);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stamp.filled {
+  background: #fff;
+  border: 2px solid var(--color-green);
+}
+.stamp.filled img {
+  width: 32px;
+  height: 32px;
+}
+.stamp.empty {
+  /* permanece em cinza-claro */
+}
+.stamp.gift {
+  background: linear-gradient(
+    45deg,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+}
+.stamp.gift img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ================================
+     CARTÃO DE PROGRESSO
+     ================================ */
+.progress-card {
+  width: 720px;
+  max-width: 90%;
+  margin: 2rem auto 0;
+  position: relative;
+  padding-right: 4rem;
+}
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.remaining {
+  font-size: var(--text-sm);
+}
+.progress-count {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: var(--gray-200);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.progress-filled {
+  height: 100%;
+  width: 70%; /* ajuste via JS */
+  background: linear-gradient(90deg, var(--color-pink), var(--color-green));
+}
+.gift-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.gift-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ================================
+     RESPONSIVIDADE
+     ================================ */
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .progress-card {
+    width: 90%;
+    padding-right: 2rem;
+  }
+}
