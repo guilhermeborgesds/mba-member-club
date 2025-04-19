@@ -2,7 +2,7 @@
 
 ## Layout
 
-(Figma Cartao Fidelidade)[https://www.figma.com/design/6h2WyZwjnL1KwIClH8MS44/Cart%C3%A3o-fidelidade--Community-?node-id=3-376&p=f&t=jKQr4Z3LNXe7F07o-0]
+[Figma Cartao Fidelidade](https://www.figma.com/design/6h2WyZwjnL1KwIClH8MS44/Cart%C3%A3o-fidelidade--Community-?node-id=3-376&p=f&t=jKQr4Z3LNXe7F07o-0)
 
 ## Requisitos
 
